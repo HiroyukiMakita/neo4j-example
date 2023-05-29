@@ -1,6 +1,27 @@
 # neo4j-example
 
-## コミットメッセージのルール
+## ## [Neo4j](https://neo4j.com/docs/getting-started/)
+
+### ### 環境構築
+
+ローカルにて、Docker で環境を構築します。  
+また、`make` コマンド（ [GNU Make](https://www.gnu.org/software/make/)）を使用できる必要があります。
+
+```
+$ cd docker
+$ make
+```
+
+上記コマンドを実行後、以下の URL で Neo4j ブラウザにアクセスできます。
+
+[Neo4j ブラウザ（http://localhost:7474/）](http://localhost:7474/)
+
+また、以下のコマンドで [Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/) CLI にログインできます。
+
+```
+$ make exec-cypher
+```
+
 
 Nuxt や React でも採用されている [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) を採用しています。
 

@@ -3,6 +3,7 @@
 #########################################################
 
 include .env
+CONTAINER_EXEC_CYPHER_SHELL := ${CONTAINER_EXEC_CYPHER_SHELL}
 
 #########################################################
 # variables
@@ -46,8 +47,11 @@ up:
 
 exec-neo4j:
 	$(eval CONTAINER := $(GRAPH_DB))
-	$(eval CONTAINER_USER_NAME := root)
-	$(eval CONTAINER_USER_NAME := root)
+	@$(EXEC)
+
+exec-cypher:
+	$(eval CONTAINER := $(GRAPH_DB))
+	$(eval ARG := -c "bash $(CONTAINER_EXEC_CYPHER_SHELL)")
 	@$(EXEC)
 
 down:
