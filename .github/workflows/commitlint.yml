@@ -8,6 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          # HEADからどれだけコミットを遡るかの設定
+          # 0 とすれば全てのコミットを遡ることができる
+          # 指定しないと Error: fatal: Invalid revision range というエラーで落ちてしまう
           fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v3
