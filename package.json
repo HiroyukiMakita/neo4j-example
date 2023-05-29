@@ -1,0 +1,18 @@
+{
+  "name": "neo4j-example",
+  "version": "1.0.0",
+  "description": "introduction to neo4j",
+  "main": "index.js",
+  "repository": "git@github.com:HiroyukiMakita/neo4j-example.git",
+  "author": "HiroyukiMakita <hiroyukimakita.pc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3"
+  },
+  "volta": {
+    "node": "18.16.0",
+    "yarn": "1.22.19"
+  }
+}

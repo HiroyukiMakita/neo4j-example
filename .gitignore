@@ -1,0 +1,9 @@
+# Environment
+.env
+
+# Neo4j
+docker/neo4j/data
+docker/neo4j/logs
+
+# Dependencies
+node_modules
