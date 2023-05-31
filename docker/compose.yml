@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  neo4j:
+    container_name: '${COMPOSE_PROJECT_NAME}-neo4j'
+    build:
+      context: ./neo4j
+      dockerfile: Dockerfile
+      args:
+        - NEO4J_IMAGE_VERSION=${NEO4J_IMAGE_VERSION}
+    environment:
+      NEO4J_AUTH: ${NEO4J_AUTH}
+      NEO4j_USERNAME: ${NEO4j_USERNAME}
+      NEO4j_PASSWORD: ${NEO4j_PASSWORD}
+    volumes:
+      - ${HOST_NEO4J_DATA_DIR}:${CONTAINER_NEO4J_DATA_DIR}
+      - ${HOST_NEO4J_LOG_DIR}:${CONTAINER_NEO4J_LOG_DIR}
+      - ${HOST_EXEC_CYPHER_SHELL}:${CONTAINER_EXEC_CYPHER_SHELL}
+    ports:
+      - ${NEO4J_BROWSER_PORT}:7474
+      - ${NEO4J_PORT}:7687
