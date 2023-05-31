@@ -21,6 +21,23 @@ $ make
 ```
 $ make exec-cypher
 ```
+#### #### [サイファーシェル - 操作マニュアル](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/#cypher-shell-commands)
+
+```
+利用可能なコマンド:
+  :begin トランザクションをオープンします
+  :commit 現在開いているトランザクションをコミットします
+  :connect データベースに接続します
+  :disconnect データベースから切断します
+  :exit ロガーを終了します
+  :help このヘルプ メッセージを表示します
+  :history ステートメント履歴
+  :impersonate ユーザーになりすます
+  :param クエリパラメータを設定、リスト、またはクリアします
+  :rollback 現在開いているトランザクションをロールバックします
+  :source ファイルから Cypher ステートメントを実行します
+  :use アクティブなデータベースを設定します
+```
 
 ## ## コミットメッセージのルール
 
